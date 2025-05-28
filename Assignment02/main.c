@@ -1,12 +1,11 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 void assignment0704();
 void fillA();
-void printA();
-int findMax();
+void printA(int a[], int max);
+int findMax(int a[]);
 
 int a[10] = { 0 };
 
@@ -68,10 +67,10 @@ int findMax(int a[])
 
 	for (int i = 1; i < 10; i++)
 	{
-		if (a[i] > a[i - 1])
+		if (a[i] > max)
 		{
+			max = a[i];
 			indexMax = i;
-			a[i] = max;
 		}
 	}
 
